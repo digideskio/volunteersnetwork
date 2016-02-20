@@ -5,7 +5,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 	$routeProvider
 		// home page
 		.when('/', {
-			templateUrl: 'views/home.html',
+			templateUrl: 'views/search.html',
 			controller: 'MainController'
 		});
 
@@ -17,3 +17,14 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 	$locationProvider.html5Mode(true);
 
 }]);
+
+app.directive('searchResult', function() {
+   return {
+       restrict: 'AE',
+       templateUrl: 'directives/jobCard.html',
+       replace: true,
+       scope: {
+           jobObject: "="
+       }
+   };
+});
