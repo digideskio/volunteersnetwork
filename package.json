@@ -8,7 +8,7 @@
     "lite": "./node_modules/.bin/lite-server",
     "typings": "typings",
     "postinstall": "typings install",
-    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" "
+    "start": "./node_modules/.bin/concurrent \"npm run tsc:w\" \"npm run lite\" "
   },
   "license": "ISC",
   "dependencies": {
