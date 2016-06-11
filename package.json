@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "scripts": {
     "preinstall": "npm i typings -g",
-    "tsc": "./node_modules/.bin/tsc",
-    "tsc:w": "npm run tsc -w",
-    "lite": "./node_modules/.bin/lite-server",
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
     "typings": "typings",
     "postinstall": "typings install",
-    "start": "./node_modules/.bin/concurrent \"npm run tsc:w\" \"npm run lite\" "
   },
   "license": "ISC",
   "dependencies": {
