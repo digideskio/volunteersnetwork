@@ -2,10 +2,10 @@
   "name": "angular2",
   "version": "1.0.0",
   "scripts": {
-    "preinstall": "npm i typings -g",    
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "lite": "lite-server",
+    "preinstall": "npm i typings -g",
+    "tsc": "./node_modules/.bin/tsc",
+    "tsc:w": "npm run tsc -w",
+    "lite": "./node_modules/.bin/lite-server",
     "typings": "typings",
     "postinstall": "typings install",
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" "
